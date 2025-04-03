@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shubh Agarwal - Chartered Accountant Articleship Student Portfolio">
+    <meta name="keywords" content="Chartered Accountant, CA, Articleship, Finance, Accounting, Taxation, GST">
+    <title>Shubh Agarwal | Chartered Accountant</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+    <style>
+        /* Dark mode tailwind variants */
+        .dark .dark\:bg-gray-800 { background-color: #1f2937 !important; }
+        .dark .dark\:bg-gray-900 { background-color: #111827 !important; }
+        .dark .dark\:bg-gray-700 { background-color: #374151 !important; }
+        .dark .dark\:text-white { color: #ffffff !important; }
+        .dark .dark\:text-gray-300 { color: #d1d5db !important; }
+        .dark .dark\:text-gray-400 { color: #9ca3af !important; }
+        .dark .dark\:text-gray-200 { color: #e5e7eb !important; }
+        .dark .dark\:text-blue-400 { color: #60a5fa !important; }
+        .dark .dark\:bg-blue-700 { background-color: #1d4ed8 !important; }
+        .dark .dark\:bg-blue-800 { background-color: #1e40af !important; }
+        .dark .dark\:bg-blue-900 { background-color: #1e3a8a !important; }
+        .dark .dark\:bg-blue-600 { background-color: #2563eb !important; }
+        .dark .dark\:border-blue-400 { border-color: #60a5fa !important; }
+        .dark .dark\:border-gray-700 { border-color: #374151 !important; }
+        .dark .dark\:border-gray-600 { border-color: #4b5563 !important; }
+        .dark .dark\:bg-gray-200 { background-color: #e5e7eb !important; }
+        .dark .dark\:text-blue-800 { color: #1e40af !important; }
+        .dark .dark\:hover\:bg-blue-600:hover { background-color: #2563eb !important; }
+        .dark .dark\:hover\:bg-gray-800:hover { background-color: #1f2937 !important; }
+        .dark .dark\:hover\:bg-gray-700:hover { background-color: #374151 !important; }
+        .dark .dark\:hover\:bg-gray-300:hover { background-color: #d1d5db !important; }
+        .dark .dark\:hover\:text-blue-400:hover { color: #60a5fa !important; }
+        .dark .dark\:hover\:text-white:hover { color: #ffffff !important; }
+        
+        /* Fix transitions */
+        .transition-colors {
+            transition-property: background-color, border-color, color, fill, stroke;
+            transition-duration: 300ms;
+        }
+    </style>
+</head>
+<body class="font-['Poppins'] bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-300">
+    <!-- Navigation -->
+    <header class="fixed w-full bg-white dark:bg-gray-800 shadow-md transition-colors duration-300 z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">
+                    <a href="#home">Shubh Agarwal</a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="#home" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">Home</a>
+                    <a href="#about" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">About</a>
+                    <a href="#education" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">Education</a>
+                    <a href="#experience" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">Experience</a>
+                    <a href="#achievements" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">Achievements</a>
+                    <a href="#contact" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">Contact</a>
+                </div>
+                
+                <!-- Dark Mode Toggle (Desktop) -->
+                <button id="theme-toggle" type="button" class="hidden md:block text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg text-sm p-2 transition-colors">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center space-x-4">
+                    <!-- Mobile Dark Mode Toggle -->
+                    <button id="theme-toggle-mobile" type="button" class="text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg text-sm p-2">
+                        <svg id="theme-toggle-dark-icon-mobile" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                        <svg id="theme-toggle-light-icon-mobile" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    
+                    <button id="mobile-menu-btn" type="button" class="text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg p-2">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden flex-col mt-4 md:hidden space-y-4 pb-4">
+                <a href="#home" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">Home</a>
+                <a href="#about" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">About</a>
+                <a href="#education" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">Education</a>
+                <a href="#experience" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">Experience</a>
+                <a href="#achievements" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">Achievements</a>
+                <a href="#contact" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <header id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 relative bg-white transition-colors duration-300">
+        <style>
+            .dark #home {
+                background-image: linear-gradient(to right, #0063e2, #230000);
+            }
+        </style>
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4 text-gray-800 dark:text-white">
+                    Hi, I'm <span class="text-blue-600 dark:text-blue-300">Shubh Agarwal</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-6 text-gray-600 dark:text-gray-200">
+                    CA Articleship Student | Future Chartered Accountant
+                </p>
+                <p class="text-gray-700 dark:text-gray-300 mb-8 max-w-lg">
+                    I'm passionate about finance, taxation, and accounting standards. 
+                    Currently pursuing my CA Articleship with a focus on building expertise 
+                    in audit and financial advisory.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#contact" class="px-6 py-3 bg-blue-600 text-white rounded-md shadow-md hover:bg-blue-700 transition duration-300">
+                        Get in Touch
+                    </a>
+                    <a href="#about" class="px-6 py-3 border border-blue-600 text-blue-600 dark:border-blue-300 dark:text-blue-300 rounded-md hover:bg-blue-50 dark:hover:bg-blue-900 dark:hover:bg-opacity-30 transition duration-300">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white dark:border-gray-700 shadow-xl">
+                        <img src="images/profile.jpg" alt="Shubh Agarwal" class="w-full h-full object-cover" 
+                        onerror="this.src='https://via.placeholder.com/400x400?text=Shubh+Agarwal'">
+                    </div>
+                    <div class="absolute -bottom-4 -right-4 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg">
+                        <p class="text-sm font-medium text-gray-800 dark:text-gray-200">CA Final</p>
+                        <p class="text-xs text-gray-600 dark:text-gray-400">Articleship Student</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Overview Section -->
+    <section id="about" class="py-12 md:py-16 bg-white dark:bg-gray-800 transition-colors duration-300">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-2 dark:text-white">About Me</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="max-w-2xl mx-auto text-gray-600 dark:text-gray-400">
+                    A brief overview of my journey, skills, and career aspirations in the field of accounting and finance.
+                </p>
+            </div>
+            
+            <!-- Personal Story Section -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center mb-16">
+                <div class="md:col-span-1">
+                    <div class="rounded-lg overflow-hidden shadow-lg">
+                        <img src="images/about-profile.jpg" alt="Shubh Agarwal" class="w-full h-auto"
+                        onerror="this.src='https://via.placeholder.com/600x800?text=Shubh+Agarwal'">
+                    </div>
+                </div>
+                <div class="md:col-span-2">
+                    <h3 class="text-2xl font-bold mb-4 dark:text-white">My Journey</h3>
+                    <div class="w-20 h-1 bg-blue-600 mb-6"></div>
+                    <p class="text-gray-700 dark:text-gray-300 mb-4">
+                        Hello! I'm Shubh Agarwal, a passionate CA Articleship student with a deep interest in finance, 
+                        taxation, and accounting. My journey into the world of accounting began during my high school years 
+                        when I discovered my aptitude for numbers and financial analysis.
+                    </p>
+                    <p class="text-gray-700 dark:text-gray-300 mb-4">
+                        What drives me is the desire to help businesses navigate the complex world of finance and taxation. 
+                        I believe that proper financial management and compliance are key to sustainable business growth, 
+                        and I aspire to be a trusted advisor in this field.
+                    </p>
+                    <p class="text-gray-700 dark:text-gray-300 mb-4">
+                        Throughout my academic journey and articleship experience, I've developed a strong foundation in 
+                        accounting principles, tax regulations, audit procedures, and financial reporting standards. I continuously 
+                        strive to stay updated with the latest changes in accounting standards and tax laws.
+                    </p>
+                    <div class="flex items-center mt-8">
+                        <div class="mr-6">
+                            <div class="text-3xl font-bold text-blue-600 dark:text-blue-400">3+</div>
+                            <div class="text-sm text-gray-600 dark:text-gray-400">Years of Learning</div>
+                        </div>
+                        <div class="mr-6">
+                            <div class="text-3xl font-bold text-blue-600 dark:text-blue-400">25+</div>
+                            <div class="text-sm text-gray-600 dark:text-gray-400">Projects Completed</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-blue-600 dark:text-blue-400">10+</div>
+                            <div class="text-sm text-gray-600 dark:text-gray-400">Clients Served</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Vision & Career Goals -->
+            <div class="mb-16">
+                <div class="text-center mb-12">
+                    <h3 class="text-2xl font-bold mb-2 dark:text-white">Career Vision & Objectives</h3>
+                    <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                    <p class="max-w-2xl mx-auto text-gray-600 dark:text-gray-400">
+                        My aspirations and the impact I aim to create in the field of accounting and finance.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-md border-t-4 border-blue-600">
+                        <h3 class="text-2xl font-bold mb-4 dark:text-white">Short-Term Goals</h3>
+                        <ul class="space-y-3 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-600 dark:text-blue-400 mt-1 mr-2"></i>
+                                <span>Successfully complete CA Final examinations with distinction</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-600 dark:text-blue-400 mt-1 mr-2"></i>
+                                <span>Gain comprehensive experience in audit, taxation, and financial advisory during articleship</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-600 dark:text-blue-400 mt-1 mr-2"></i>
+                                <span>Develop expertise in specialized areas like GST, direct taxation, and IFRS</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-600 dark:text-blue-400 mt-1 mr-2"></i>
+                                <span>Build a network of professionals in the accounting and finance industry</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-md border-t-4 border-blue-600">
+                        <h3 class="text-2xl font-bold mb-4 dark:text-white">Long-Term Vision</h3>
+                        <ul class="space-y-3 text-gray-700 dark:text-gray-300">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-600 dark:text-blue-400 mt-1 mr-2"></i>
+                                <span>Become a recognized expert in financial advisory and strategic consulting</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-600 dark:text-blue-400 mt-1 mr-2"></i>
+                                <span>Establish a practice focusing on tax optimization and financial restructuring</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-600 dark:text-blue-400 mt-1 mr-2"></i>
+                                <span>Contribute to the development of accounting standards and practices</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-600 dark:text-blue-400 mt-1 mr-2"></i>
+                                <span>Mentor aspiring chartered accountants and finance professionals</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Personal Values -->
+            <div>
+                <div class="text-center mb-12">
+                    <h3 class="text-2xl font-bold mb-2 dark:text-white">My Core Values</h3>
+                    <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                    <p class="max-w-2xl mx-auto text-gray-600 dark:text-gray-400">
+                        The principles that guide my professional approach and personal conduct.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="p-6 bg-blue-50 dark:bg-blue-900 rounded-lg shadow-md text-center">
+                        <div class="w-16 h-16 mx-auto flex items-center justify-center bg-blue-600 dark:bg-blue-700 text-white rounded-full mb-4">
+                            <i class="fas fa-balance-scale text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 dark:text-white">Integrity</h3>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Upholding ethical standards and maintaining transparency in all professional dealings.
+                        </p>
+                    </div>
+                    <div class="p-6 bg-blue-50 dark:bg-blue-900 rounded-lg shadow-md text-center">
+                        <div class="w-16 h-16 mx-auto flex items-center justify-center bg-blue-600 dark:bg-blue-700 text-white rounded-full mb-4">
+                            <i class="fas fa-graduation-cap text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 dark:text-white">Continuous Learning</h3>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Constantly updating my knowledge and skills to stay ahead in the ever-evolving finance world.
+                        </p>
+                    </div>
+                    <div class="p-6 bg-blue-50 dark:bg-blue-900 rounded-lg shadow-md text-center">
+                        <div class="w-16 h-16 mx-auto flex items-center justify-center bg-blue-600 dark:bg-blue-700 text-white rounded-full mb-4">
+                            <i class="fas fa-handshake text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 dark:text-white">Client Focus</h3>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Providing exceptional service and tailored solutions that address specific client needs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Skills Section -->
+    <section id="education" class="py-12 md:py-16 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-2 dark:text-white">Education & Skills</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="max-w-2xl mx-auto text-gray-600 dark:text-gray-400">
+                    My academic journey and the professional competencies I've developed along the way.
+                </p>
+            </div>
+
+            <!-- Education Timeline -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold mb-8 text-center dark:text-white">Educational Timeline</h3>
+                <div class="relative max-w-4xl mx-auto">
+                    <!-- Timeline Connector -->
+                    <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-200 dark:bg-blue-800"></div>
+
+                    <!-- CA Final -->
+                    <div class="relative flex flex-col md:flex-row items-center mb-8">
+                        <div class="flex items-center justify-center md:absolute md:left-1/2 md:transform md:-translate-x-1/2 z-10 mb-4 md:mb-0">
+                            <div class="w-10 h-10 bg-blue-600 dark:bg-blue-700 rounded-full flex items-center justify-center text-white shadow-lg">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 invisible md:visible"></div>
+                        <div class="md:w-1/2 md:pl-8 md:text-left md:ml-4 order-1 md:order-2">
+                            <div class="bg-blue-50 dark:bg-gray-700 p-6 rounded-lg shadow-md">
+                                <span class="text-blue-600 dark:text-blue-400 font-semibold">2022 - Present</span>
+                                <h3 class="text-xl font-bold mb-2 dark:text-white">CA Final</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Currently pursuing CA Final level, focusing on advanced accounting, corporate laws, direct tax laws, and strategic financial management.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CA Intermediate -->
+                    <div class="relative flex flex-col md:flex-row items-center mb-8">
+                        <div class="flex items-center justify-center md:absolute md:left-1/2 md:transform md:-translate-x-1/2 z-10 mb-4 md:mb-0">
+                            <div class="w-10 h-10 bg-blue-600 dark:bg-blue-700 rounded-full flex items-center justify-center text-white shadow-lg">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 md:pr-8 md:text-right md:mr-4 order-1 md:order-1">
+                            <div class="bg-blue-50 dark:bg-gray-700 p-6 rounded-lg shadow-md">
+                                <span class="text-blue-600 dark:text-blue-400 font-semibold">2021 - 2022</span>
+                                <h3 class="text-xl font-bold mb-2 dark:text-white">CA Intermediate</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Successfully completed CA Intermediate with distinction, scoring above 70% in key subjects including Accounting, Auditing, Taxation, and Corporate Laws.</p>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 invisible md:visible"></div>
+                    </div>
+
+                    <!-- CA Foundation -->
+                    <div class="relative flex flex-col md:flex-row items-center mb-8">
+                        <div class="flex items-center justify-center md:absolute md:left-1/2 md:transform md:-translate-x-1/2 z-10 mb-4 md:mb-0">
+                            <div class="w-10 h-10 bg-blue-600 dark:bg-blue-700 rounded-full flex items-center justify-center text-white shadow-lg">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 invisible md:visible"></div>
+                        <div class="md:w-1/2 md:pl-8 md:text-left md:ml-4 order-1 md:order-2">
+                            <div class="bg-blue-50 dark:bg-gray-700 p-6 rounded-lg shadow-md">
+                                <span class="text-blue-600 dark:text-blue-400 font-semibold">2020 - 2021</span>
+                                <h3 class="text-xl font-bold mb-2 dark:text-white">CA Foundation</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Cleared CA Foundation in first attempt with 75% marks, establishing a strong base in Accounting, Business Law, Economics, and Quantitative Aptitude.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Higher Secondary Education -->
+                    <div class="relative flex flex-col md:flex-row items-center">
+                        <div class="flex items-center justify-center md:absolute md:left-1/2 md:transform md:-translate-x-1/2 z-10 mb-4 md:mb-0">
+                            <div class="w-10 h-10 bg-blue-600 dark:bg-blue-700 rounded-full flex items-center justify-center text-white shadow-lg">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 md:pr-8 md:text-right md:mr-4 order-1 md:order-1">
+                            <div class="bg-blue-50 dark:bg-gray-700 p-6 rounded-lg shadow-md">
+                                <span class="text-blue-600 dark:text-blue-400 font-semibold">2019 - 2020</span>
+                                <h3 class="text-xl font-bold mb-2 dark:text-white">Higher Secondary Education (12th)</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Completed 12th grade with 92% marks in Commerce stream with Mathematics, laying the foundation for my career in accounting and finance.</p>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 invisible md:visible"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications Section -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold mb-8 text-center dark:text-white">Certifications</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md border-l-4 border-blue-600 dark:border-blue-400 transition-transform hover:scale-105">
+                        <div class="flex items-start">
+                            <div class="text-blue-600 dark:text-blue-400 text-3xl mr-4">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2 dark:text-white">GST Certification Course</h3>
+                                <p class="text-gray-600 dark:text-gray-400 mb-2">ICAI | 2022</p>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Comprehensive understanding of Goods and Services Tax framework, compliance requirements, and practical implementation.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md border-l-4 border-blue-600 dark:border-blue-400 transition-transform hover:scale-105">
+                        <div class="flex items-start">
+                            <div class="text-blue-600 dark:text-blue-400 text-3xl mr-4">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2 dark:text-white">Financial Modeling & Valuation</h3>
+                                <p class="text-gray-600 dark:text-gray-400 mb-2">Wall Street Prep | 2023</p>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Advanced skills in building financial models, valuation techniques, and financial statement analysis.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Skills Section -->
+            <div>
+                <h3 class="text-2xl font-bold mb-8 text-center dark:text-white">Technical Skills</h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <!-- Technical Skills Column 1 -->
+                    <div>
+                        <!-- MS Excel -->
+                        <div class="mb-8">
+                            <div class="flex justify-between items-center mb-2">
+                                <h4 class="text-lg font-semibold dark:text-white">MS Excel & Financial Modeling</h4>
+                                <span class="text-blue-600 dark:text-blue-400 font-semibold">95%</span>
+                            </div>
+                            <div class="w-full h-2 bg-gray-200 dark:bg-gray-600 rounded-full">
+                                <div class="h-full bg-blue-600 dark:bg-blue-500 rounded-full" style="width: 95%"></div>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-400 mt-2 text-sm">
+                                Advanced functions, PivotTables, financial modeling, data analysis, dashboards
+                            </p>
+                        </div>
+
+                        <!-- Income Tax -->
+                        <div class="mb-8">
+                            <div class="flex justify-between items-center mb-2">
+                                <h4 class="text-lg font-semibold dark:text-white">Income Tax</h4>
+                                <span class="text-blue-600 dark:text-blue-400 font-semibold">90%</span>
+                            </div>
+                            <div class="w-full h-2 bg-gray-200 dark:bg-gray-600 rounded-full">
+                                <div class="h-full bg-blue-600 dark:bg-blue-500 rounded-full" style="width: 90%"></div>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-400 mt-2 text-sm">
+                                Direct tax laws, compliance, tax planning strategies, ITR filing, tax audits
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Technical Skills Column 2 -->
+                    <div>
+                        <!-- GST -->
+                        <div class="mb-8">
+                            <div class="flex justify-between items-center mb-2">
+                                <h4 class="text-lg font-semibold dark:text-white">GST</h4>
+                                <span class="text-blue-600 dark:text-blue-400 font-semibold">90%</span>
+                            </div>
+                            <div class="w-full h-2 bg-gray-200 dark:bg-gray-600 rounded-full">
+                                <div class="h-full bg-blue-600 dark:bg-blue-500 rounded-full" style="width: 90%"></div>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-400 mt-2 text-sm">
+                                GST compliance, returns filing, input tax credit optimization, e-invoicing
+                            </p>
+                        </div>
+
+                        <!-- Accounting Software -->
+                        <div class="mb-8">
+                            <div class="flex justify-between items-center mb-2">
+                                <h4 class="text-lg font-semibold dark:text-white">Accounting Software</h4>
+                                <span class="text-blue-600 dark:text-blue-400 font-semibold">85%</span>
+                            </div>
+                            <div class="w-full h-2 bg-gray-200 dark:bg-gray-600 rounded-full">
+                                <div class="h-full bg-blue-600 dark:bg-blue-500 rounded-full" style="width: 85%"></div>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-400 mt-2 text-sm">
+                                Tally, QuickBooks, SAP (Basic), financial reporting systems
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-12 md:py-16 bg-white dark:bg-gray-800 transition-colors duration-300">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-2 dark:text-white">Professional Experience</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="max-w-2xl mx-auto text-gray-600 dark:text-gray-400">
+                    My professional experience and the practical knowledge gained during my CA Articleship.
+                </p>
+            </div>
+
+            <!-- Articleship Experience -->
+            <div class="mb-16">
+                <div class="bg-blue-50 dark:bg-gray-700 p-8 rounded-lg shadow-md border-t-4 border-blue-600 dark:border-blue-400 mb-8">
+                    <div class="flex flex-col md:flex-row md:items-start">
+                        <div class="mb-4 md:mb-0 md:mr-6">
+                            <img src="images/firm-logo.jpg" alt="Firm Logo" class="w-16 h-16 object-cover rounded"
+                            onerror="this.src='https://via.placeholder.com/80x80?text=Firm'">
+                        </div>
+                        <div>
+                            <div class="flex flex-col md:flex-row md:items-center mb-2">
+                                <h3 class="text-xl font-bold mr-4 dark:text-white">CA Articleship Trainee</h3>
+                                <span class="text-blue-600 dark:text-blue-400 font-medium">B.K. Sharma & Associates</span>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">March 2022 - Present | Mumbai, India</p>
+                            <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-blue-600 dark:text-blue-400 text-xs mt-1.5 mr-2"></i>
+                                    <span>Assisted in statutory audits for 15+ companies across manufacturing, trading, and service sectors.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-blue-600 dark:text-blue-400 text-xs mt-1.5 mr-2"></i>
+                                    <span>Prepared financial statements in accordance with Ind AS and conducted ratio analysis for 10+ clients.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-blue-600 dark:text-blue-400 text-xs mt-1.5 mr-2"></i>
+                                    <span>Managed GST compliance for 20+ clients, ensuring timely filing of returns and addressing discrepancies.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-blue-600 dark:text-blue-400 text-xs mt-1.5 mr-2"></i>
+                                    <span>Assisted in income tax return filing for individuals, firms, and companies, identifying tax-saving opportunities.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-blue-600 dark:text-blue-400 text-xs mt-1.5 mr-2"></i>
+                                    <span>Developed automated Excel templates for financial reporting, reducing processing time by 30%.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Experience -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold mb-8 text-center dark:text-white">Key Projects</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                        <h4 class="text-xl font-bold mb-2 dark:text-white">Manufacturing Sector Audit</h4>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Metal Components Manufacturing Company</p>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">
+                            Conducted comprehensive statutory audit for a manufacturing company with annual turnover of ₹50 crores.
+                            Performed detailed verification of inventory valuation, fixed assets, and revenue recognition.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-800 text-white-800 dark:text-blue-200 rounded-full text-sm">Statutory Audit</span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-800 text-white-800 dark:text-blue-200 rounded-full text-sm">Inventory Valuation</span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-800 text-white-800 dark:text-blue-200 rounded-full text-sm">Fixed Assets</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                        <h4 class="text-xl font-bold mb-2 dark:text-white">GST Compliance Management</h4>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Retail Chain with Multiple Locations</p>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">
+                            Streamlined GST compliance process for a retail chain operating in 5 states.
+                            Implemented system for regular reconciliation of input tax credits and developed 
+                            automated checks for identifying discrepancies.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-800 text-white-800 dark:text-blue-200 rounded-full text-sm">GST</span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-800 text-white-800 dark:text-blue-200 rounded-full text-sm">Tax Compliance</span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-800 text-white-800 dark:text-blue-200 rounded-full text-sm">Process Automation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonials -->
+            <div>
+                <h3 class="text-2xl font-bold mb-8 text-center dark:text-white">What People Say</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-blue-50 dark:bg-gray-700 p-6 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="text-yellow-400 flex mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="text-gray-600 dark:text-gray-400">5.0</div>
+                        </div>
+                        <p class="text-gray-700 dark:text-gray-300 mb-6 italic">
+                            "Shubh demonstrated exceptional analytical skills during the audit engagement. His attention to detail
+                            and ability to identify key financial discrepancies helped streamline our reporting processes significantly."
+                        </p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                <img src="images/testimonial-1.jpg" alt="Client" class="w-full h-full object-cover"
+                                onerror="this.src='https://via.placeholder.com/48x48?text=R'">
+                            </div>
+                            <div>
+                                <h4 class="font-semibold dark:text-white">Rajiv Mehta</h4>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">CFO, Metal Components Ltd.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-blue-50 dark:bg-gray-700 p-6 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="text-yellow-400 flex mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <div class="text-gray-600 dark:text-gray-400">4.5</div>
+                        </div>
+                        <p class="text-gray-700 dark:text-gray-300 mb-6 italic">
+                            "Working with Shubh on our tax compliance has been incredibly beneficial. His understanding of GST regulations
+                            and attention to compliance deadlines helped us avoid penalties and optimize our tax position."
+                        </p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                <img src="images/testimonial-2.jpg" alt="Client" class="w-full h-full object-cover"
+                                onerror="this.src='https://via.placeholder.com/48x48?text=S'">
+                            </div>
+                            <div>
+                                <h4 class="font-semibold dark:text-white">Sunita Patel</h4>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">Director, SP Retail Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="py-12 md:py-16 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-2 dark:text-white">Achievements</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="max-w-2xl mx-auto text-gray-600 dark:text-gray-400">
+                    Key milestones and recognitions I've received in my academic and professional journey.
+                </p>
+            </div>
+
+            <!-- Academic Achievements -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold mb-8 text-center dark:text-white">Academic Excellence</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                            <i class="fas fa-medal text-4xl text-blue-600 dark:text-blue-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 dark:text-white">CA Intermediate</h3>
+                        <p class="text-gray-700 dark:text-gray-300 mb-2">All India Rank 75</p>
+                        <p class="text-gray-600 dark:text-gray-400">
+                            Secured All India Rank 75 in CA Intermediate examination, scoring distinction in Accounting and Taxation.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                            <i class="fas fa-award text-4xl text-blue-600 dark:text-blue-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 dark:text-white">CA Foundation</h3>
+                        <p class="text-gray-700 dark:text-gray-300 mb-2">State Rank 15</p>
+                        <p class="text-gray-600 dark:text-gray-400">
+                            Achieved State Rank 15 in CA Foundation examination with 75% marks and distinction in Accounting.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                            <i class="fas fa-graduation-cap text-4xl text-blue-600 dark:text-blue-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 dark:text-white">12th Board Exams</h3>
+                        <p class="text-gray-700 dark:text-gray-300 mb-2">School Topper</p>
+                        <p class="text-gray-600 dark:text-gray-400">
+                            Topped the school in Commerce stream with 92% marks and distinction in Accountancy and Mathematics.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professional Achievements -->
+            <div>
+                <h3 class="text-2xl font-bold mb-8 text-center dark:text-white">Professional Recognition</h3>
+                
+                <div class="space-y-6">
+                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/4 mb-4 md:mb-0 flex justify-center md:justify-start">
+                                <div class="w-20 h-20 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-trophy text-3xl text-blue-600 dark:text-blue-400"></i>
+                                </div>
+                            </div>
+                            <div class="md:w-3/4">
+                                <h3 class="text-xl font-bold mb-2 dark:text-white">Best Article Trainee Award</h3>
+                                <p class="text-gray-600 dark:text-gray-400 mb-4">B.K. Sharma & Associates | 2023</p>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Recognized as the Best Article Trainee for exceptional performance in audit engagements and client service.
+                                    Acknowledged for developing innovative Excel templates that improved reporting efficiency by 30%.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/4 mb-4 md:mb-0 flex justify-center md:justify-start">
+                                <div class="w-20 h-20 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-certificate text-3xl text-blue-600 dark:text-blue-400"></i>
+                                </div>
+                            </div>
+                            <div class="md:w-3/4">
+                                <h3 class="text-xl font-bold mb-2 dark:text-white">GST Champion Award</h3>
+                                <p class="text-gray-600 dark:text-gray-400 mb-4">Mumbai CA Students Association | 2022</p>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Won first place in the GST Case Study Competition organized by Mumbai CA Students Association.
+                                    Presented innovative solutions for complex GST scenarios in multi-state business operations.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/4 mb-4 md:mb-0 flex justify-center md:justify-start">
+                                <div class="w-20 h-20 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-lightbulb text-3xl text-blue-600 dark:text-blue-400"></i>
+                                </div>
+                            </div>
+                            <div class="md:w-3/4">
+                                <h3 class="text-xl font-bold mb-2 dark:text-white">Innovative Solution Award</h3>
+                                <p class="text-gray-600 dark:text-gray-400 mb-4">ICAI Regional Conference | 2023</p>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Received recognition for developing a comprehensive tax planning model for small businesses,
+                                    showcased at the ICAI Regional Student Conference and adopted by three CA firms.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-12 md:py-16 bg-white dark:bg-gray-800 transition-colors duration-300">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-2 dark:text-white">Get In Touch</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="max-w-2xl mx-auto text-gray-600 dark:text-gray-400">
+                    Have questions or want to discuss potential opportunities? I'm just a message away.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 dark:text-white">Send Me a Message</h3>
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 dark:text-gray-300 mb-2">Your Name <span class="text-red-500">*</span></label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 dark:text-gray-300 mb-2">Email Address <span class="text-red-500">*</span></label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-700 dark:text-gray-300 mb-2">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-gray-700 dark:text-gray-300 mb-2">Subject <span class="text-red-500">*</span></label>
+                            <input type="text" id="subject" name="subject" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 dark:text-gray-300 mb-2">Your Message <span class="text-red-500">*</span></label>
+                            <textarea id="message" name="message" rows="5" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="px-6 py-3 bg-blue-600 text-white dark:bg-blue-700 dark:hover:bg-blue-600 rounded-md hover:bg-blue-700 transition duration-300 w-full md:w-auto">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 dark:text-white">Contact Information</h3>
+                    <div class="space-y-8">
+                        <div class="flex items-start">
+                            <div class="text-blue-600 dark:text-blue-400 text-2xl mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1 dark:text-white">Email</h4>
+                                <p class="text-gray-700 dark:text-gray-300 mb-1">contact@shubhagarwal.com</p>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">Feel free to email me for any queries or discussions.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-blue-600 dark:text-blue-400 text-2xl mr-4">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-1 dark:text-white">Phone</h4>
+                                <p class="text-gray-700 dark:text-gray-300 mb-1">+91 98765 43210</p>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">Available Monday to Friday, 9:00 AM to 6:00 PM IST</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-blue-600 dark:text-blue-400 text-2xl mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-3 dark:text-white">Location</h4>
+                                <p class="text-gray-700 dark:text-gray-300 mb-1">Mumbai, Maharashtra</p>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">Available for in-person meetings in the Mumbai metropolitan area</p>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold text-lg mb-3 dark:text-white">Connect with me on social media</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition duration-300">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-blue-400 text-white rounded-full flex items-center justify-center hover:bg-blue-500 transition duration-300">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-red-600 text-white rounded-full flex items-center justify-center hover:bg-red-700 transition duration-300">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center hover:bg-green-700 transition duration-300">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-12 md:py-16 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-10">
+                <h3 class="text-2xl font-bold mb-4 dark:text-white">Find Me Here</h3>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                    Located in the heart of Mumbai's financial district, I'm easily accessible for face-to-face meetings.
+                </p>
+            </div>
+            <div class="rounded-lg overflow-hidden shadow-lg">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.1160984904!2d72.7162522533672!3d19.08253732917782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1648622909290!5m2!1sen!2sin" 
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="dark:grayscale dark:invert-[.85]"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-12 bg-blue-600 dark:bg-blue-800 text-white transition-colors duration-300">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Ready to Connect?</h2>
+            <p class="max-w-xl mx-auto mb-8">
+                Whether you have a question about finance, accounting, or taxation, or want to explore potential opportunities, 
+                I'm here to help. Let's start a conversation today!
+            </p>
+            <a href="#contact" class="px-8 py-3 bg-white dark:bg-gray-200 text-blue-600 dark:text-blue-800 rounded-md shadow-md hover:bg-gray-100 dark:hover:bg-gray-300 transition duration-300 font-medium">
+                Reach Out Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 dark:bg-gray-900 text-white py-8 transition-colors duration-300">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-xl font-bold">Shubh Agarwal</h3>
+                    <p class="text-gray-400">CA Articleship Student</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <hr class="border-gray-700 dark:border-gray-600 my-6">
+            <div class="text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Shubh Agarwal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Form Success Message -->
+    <div id="form-success" class="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 hidden">
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg max-w-md w-full">
+            <div class="text-center">
+                <i class="fas fa-check-circle text-green-500 text-5xl mb-4"></i>
+                <h3 class="text-xl font-bold mb-2 dark:text-white">Message Sent Successfully!</h3>
+                <p class="text-gray-700 dark:text-gray-300 mb-6">Thank you for reaching out. I'll get back to you as soon as possible.</p>
+                <button onclick="document.getElementById('form-success').classList.add('hidden')" 
+                    class="px-6 py-2 bg-blue-600 dark:bg-blue-700 text-white rounded-md hover:bg-blue-700 dark:hover:bg-blue-600 transition duration-300">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 
